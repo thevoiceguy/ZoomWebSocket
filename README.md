@@ -1,2 +1,2 @@
 # ZoomWebSocet
-A python to interact with Zoom WebSockets
+A python class to interact with Zoom WebSockets
