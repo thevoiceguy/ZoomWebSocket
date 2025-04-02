@@ -28,7 +28,7 @@ class ZoomWebSocket:
     ACCOUNT_ID: str = os.getenv("ACCOUNT_ID")
     CLIENT_ID: str = os.getenv("CLIENT_ID")
     CLIENT_SECRET: str = os.getenv("CLIENT_SECRET")
-    meeting_id: str = "your meeting id"
+    meeting_id: str = "83148128109"
 
     # Define a list of (user, phone_number) tuples, IE numbers we want to call when the meeting starts
     participants = [
@@ -221,6 +221,10 @@ class ZoomWebSocket:
                 self.logger.info("Meeting has started. Placing calls to participants!")
                 for user, phone in self.participants:
                     self.place_call(meeting, user, phone)
+		    #Send email with invite link uncomment to use
+            '''email_msg="Priority Incident Meeting has started please join the meeting\n https://zoom.us/your meeting url"
+            self.send_mail(to_email=['email1@example.com', 'email2@example.com'],
+                subject="Priority Incident Meeting has started!", message=email_msg)'''
         except Exception as e:
             self.logger.error("Error in process_meeting_started_event: " + str(e))
 
