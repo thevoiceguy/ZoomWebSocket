@@ -28,7 +28,7 @@ class ZoomWebSocket:
     ACCOUNT_ID: str = os.getenv("ACCOUNT_ID")
     CLIENT_ID: str = os.getenv("CLIENT_ID")
     CLIENT_SECRET: str = os.getenv("CLIENT_SECRET")
-    meeting_id: str = "83148128109"
+    meeting_id: str = "your meeting id"
 
     # Define a list of (user, phone_number) tuples, IE numbers we want to call when the meeting starts
     participants = [
